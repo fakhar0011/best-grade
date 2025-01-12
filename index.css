@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.snap-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.snap-sections > * {
+  scroll-snap-align: center;
+  height: 100vh;
+}
+
+.snap-container {
+  scroll-behavior: smooth;
+}
